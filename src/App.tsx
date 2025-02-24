@@ -1,11 +1,14 @@
+import { MainPage } from "./Pages/MainPage"
+import {  ThemeProvider, ThemeContext } from "./Contexts/ThemeContext"
 
 function App() {
 
+  const themeValue: React.ContextType<typeof ThemeContext> = "light";
+
   return (
-    <>
-      <h1>Hello World</h1>
-      <h2>From Brazil</h2>
-    </>
+    <ThemeProvider value={themeValue}>
+      <MainPage />
+    </ThemeProvider>
   )
 }
 

@@ -1,6 +1,8 @@
 import React from 'react';
 
-export const ThemeContext = React.createContext('light');
+type Theme = 'light' | 'dark';
+
+export const ThemeContext = React.createContext<Theme>('light');
 export const ThemeProvider = ThemeContext.Provider;
 export const ThemeConsumer = ThemeContext.Consumer;
 
